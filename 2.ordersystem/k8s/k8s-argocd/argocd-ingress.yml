@@ -9,14 +9,15 @@ metadata:
 spec:
   tls:
   - hosts:
-      - argo.bradkim197.shop
-    secretName: argo-bradkim197-com-tls
+      - argo.aws-esk.com
+    secretName: argo-aws-esk-com-tls
   rules:
-  - host: argo.bradkim197.shop
+  - host: argo.aws-esk.com
     http:
       paths:
         - path: /
           pathType: Prefix
+
           backend:
             service:
               name: argocd-server
